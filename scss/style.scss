@@ -110,6 +110,43 @@ main {
 }
 
 
+/*Contacto*/
+
+.form-container {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    
+    legend {
+        font-family: 'Roboto', sans-serif;
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        font-family: 'Alata', sans-serif;
+        margin-top: 30px;
+        padding: 8px 30px 8px 30px;
+        background-color: red;
+        border-color: red;
+        color: black;
+
+        &:hover {
+            background-color: rgb(245, 0, 0);
+            box-shadow: 1px 1px 3px grey;
+        }
+        
+        &:active {
+            background-color: black;
+            border-color: black;
+        }
+    }
+
+    .bi {
+        font-size: 40px;
+    }
+}
+
+
 /*Footer*/
 
 footer {
@@ -141,10 +178,21 @@ footer {
 /*Responsive*/
 
 @media screen and (max-width: 767px) {
+    
     .navbar-brand {
         display: none;
     }
+    
     .navbar {
         width: 100%;
     }
+
+    .form-container{
+        
+
+        legend {
+            font-size: 55px;
+        }
+    }
+
 }
