@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+
+/*navbar*/
+
+.navbar {
+    padding: 1.5rem;
+    background-color: red;
+
+    .navbar-collapse {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+
+/*main*/
+
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "titulo titulo primertexto primertexto primertextoiconos"
+                         "titulo titulo segundotextoiconos segundotexto segundotexto"
+                         "tercertexto tercertexto tercertextoiconos tercertextoiconos tercertextoiconos";
+    
+
+
+    .bi {
+        font-size: 65px;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo {
+        grid-area: titulo;
+        justify-self: center;
+        align-self: center;
+        font-family: 'Alata', sans-serif;
+        font-weight: 700;
+        font-size: 100px;
+    }
+
+    .primer-texto {
+        grid-area: primertexto;
+        align-self: center;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .primer-texto-iconos {
+        grid-area: primertextoiconos;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .segundo-texto-iconos {
+        grid-area: segundotextoiconos;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .segundo-texto {
+        grid-area: segundotexto;
+        align-self: center;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .tercer-texto {
+        grid-area: tercertexto;
+        align-self: center;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .tercer-texto-iconos {
+        grid-area: tercertextoiconos;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+/*Footer*/
+
+footer {
+    padding: 10px;
+    background-color: black;
+
+    .iconos-redes-sociales{
+        
+        a{
+            padding-right: 30px;
+            padding-left: 30px;
+            transition: all 0.2s ease-in;
+        }
+
+        i{
+            font-size: 50px;
+            color: white;
+            transition: all 0.2s ease-in;
+        }
+
+        i:hover{
+            color: rgb(209, 209, 209);
+        }
+    }
+}
+
+
+
+/*Responsive*/
+
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        display: none;
+    }
+    .navbar {
+        width: 100%;
+    }
+}
