@@ -23,7 +23,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/*main*/
+/*Index*/
 main {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -118,6 +118,27 @@ main .tercer-texto-iconos {
 }
 .form-container .bi {
   font-size: 40px;
+}
+
+/*Travesias*/
+.card {
+  opacity: 0.9;
+  transition: all 300ms ease;
+}
+.card:hover {
+  opacity: 1;
+  box-shadow: 3px 4px 9px grey;
+  transform: scale(1.02);
+}
+
+.card-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+}
+
+.card-title {
+  font-family: "Alata", sans-serif;
+  font-size: 30px;
 }
 
 /*Footer*/
