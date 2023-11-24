@@ -107,6 +107,16 @@ main .tercer-texto-iconos {
 }
 
 /*Galeria*/
+.galeria-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.galeria-container img {
+  border: 3px solid black;
+  box-shadow: 5px 6px 3px rgba(0, 0, 0, 0.25);
+}
+
 /*Contacto*/
 .form-container {
   margin-top: 50px;
