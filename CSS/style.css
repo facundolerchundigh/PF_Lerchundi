@@ -149,11 +149,16 @@ main .tercer-texto-iconos {
 
 /*Travesias*/
 .tr-card {
-  opacity: 0.9;
   transition: all 300ms ease;
 }
+.tr-card img {
+  filter: grayscale(100%);
+  transition: all 200ms ease;
+}
+.tr-card img:hover {
+  filter: grayscale(0%);
+}
 .tr-card:hover {
-  opacity: 1;
   box-shadow: 3px 4px 9px grey;
   transform: scale(1.02);
 }
