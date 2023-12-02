@@ -259,5 +259,16 @@ footer .iconos-redes-sociales i:hover {
     padding-bottom: 30px;
   }
 }
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px 1fr 100px 1fr 100px 350px;
+    grid-template-areas: "titulo" "primertextoiconos" "primertexto" "segundotextoiconos" "segundotexto" "tercertextoiconos" "tercertexto";
+  }
+  main .titulo {
+    padding-bottom: 55px;
+    font-size: 70px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

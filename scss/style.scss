@@ -337,3 +337,23 @@ footer {
     }
     }
 }
+
+@media screen and (max-width: 600px) {
+    main {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px 1fr 100px 1fr 100px 350px;
+        grid-template-areas: "titulo"
+                             "primertextoiconos"
+                             "primertexto"
+                             "segundotextoiconos"
+                             "segundotexto"
+                             "tercertextoiconos"
+                             "tercertexto";
+    
+    .titulo {
+        padding-bottom: 55px;
+        font-size: 70px;
+    }
+    }
+}
