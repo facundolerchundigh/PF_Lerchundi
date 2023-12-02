@@ -239,6 +239,43 @@ main {
     margin-bottom: 60px;
 }
 
+
+/*Error404*/
+.error-titulo {
+    font-family: 'Alata', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    padding-top: 150px;
+}
+
+.error-texto {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.error-boton {
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 0.5rem;
+    background-color: red;
+    border-color: red;
+    color: black;
+
+    &:hover {
+        background-color: rgb(245, 0, 0);
+        box-shadow: 1px 1px 3px grey;
+    }
+    
+    &:active {
+        background-color: black;
+        border-color: black;
+        color: white;
+    }
+}
+
+
 /*Footer*/
 
 footer {
@@ -355,5 +392,12 @@ footer {
         padding-bottom: 55px;
         font-size: 70px;
     }
+    }
+}
+
+/*Error404*/
+@media screen and (max-width: 550px) {
+    .error-titulo {
+        font-size: 70px;
     }
 }
