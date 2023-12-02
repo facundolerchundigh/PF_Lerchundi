@@ -219,7 +219,9 @@ footer .iconos-redes-sociales i:hover {
 /*Responsive*/
 @media screen and (max-width: 767px) {
   .navbar-brand {
-    display: none;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
   }
   .navbar {
     width: 100%;
