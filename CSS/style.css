@@ -15,13 +15,13 @@ body {
   padding: 1.3rem;
   background-color: red;
 }
-.navbar .navbar-collapse {
-  align-items: center;
-  justify-content: space-between;
-}
-.navbar .navbar-collapse img:hover {
+.navbar img:hover {
   transition: all 300ms ease;
   transform: scale(1.12);
+}
+.navbar .navbar-collapse {
+  align-items: center;
+  justify-content: end;
 }
 .navbar .nav-link {
   font-family: "Roboto", sans-serif;
@@ -155,12 +155,12 @@ main .tercer-texto-iconos {
   filter: grayscale(100%);
   transition: all 200ms ease;
 }
-.tr-card img:hover {
-  filter: grayscale(0%);
-}
 .tr-card:hover {
   box-shadow: 3px 4px 9px grey;
   transform: scale(1.02);
+}
+.tr-card:hover img {
+  filter: grayscale(0%);
 }
 
 .tr-card-text {
@@ -250,12 +250,8 @@ footer .iconos-redes-sociales i:hover {
 }
 
 /*Responsive*/
+/*Navbar*/
 @media screen and (max-width: 767px) {
-  .navbar-brand {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-  }
   .navbar {
     width: 100%;
   }

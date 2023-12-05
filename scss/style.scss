@@ -16,15 +16,14 @@ body {
 .navbar {
     padding: 1.3rem;
     background-color: red;
+    img:hover {
+        transition: all 300ms ease;
+        transform: scale(1.12);
+    }
 
     .navbar-collapse {
         align-items: center;
-        justify-content: space-between;
-
-        img:hover {
-            transition: all 300ms ease;
-            transform: scale(1.12);
-        }
+        justify-content: end;
     }
 
     .nav-link {
@@ -192,14 +191,14 @@ main {
     img{
         filter: grayscale(100%);
         transition: all 200ms ease;
-        &:hover {
-            filter: grayscale(0%);
-        }
     }
 
     &:hover {
         box-shadow: 3px 4px 9px grey;
         transform: scale(1.02);
+        img {
+            filter: grayscale(0%);
+        }
     }
 }
 
@@ -305,15 +304,8 @@ footer {
 
 
 /*Responsive*/
-
+/*Navbar*/
 @media screen and (max-width: 767px) {
-    
-    .navbar-brand {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 20px;
-    }
-    
     .navbar {
         width: 100%;
     }
