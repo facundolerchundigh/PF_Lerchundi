@@ -198,11 +198,18 @@ main .tercer-texto-iconos {
 }
 
 /*Error404*/
+.error-container {
+  height: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .error-titulo {
   font-family: "Alata", sans-serif;
   font-weight: 700;
   font-size: 100px;
-  padding-top: 150px;
 }
 
 .error-texto {
@@ -303,6 +310,14 @@ footer .iconos-redes-sociales i:hover {
 @media screen and (max-width: 550px) {
   .error-titulo {
     font-size: 70px;
+  }
+  .error-container {
+    height: 900px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .error-titulo {
+    text-align: center;
   }
 }
 
