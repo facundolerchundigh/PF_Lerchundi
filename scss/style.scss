@@ -1,3 +1,19 @@
+$fuenteprincipal: 'Alata', sans-serif;
+$fuentesecundaria: 'Roboto', sans-serif;
+$rojo: red;
+$justifycentrado: center;
+$aligncentrado: center;
+
+@mixin textocentrado ($center) {
+    text-align: $center;
+}
+
+@mixin just-alig-centrado ($just-alig-centrado) {
+    justify-content: $just-alig-centrado;
+    align-items: $just-alig-centrado;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -15,19 +31,19 @@ body {
 
 .navbar {
     padding: 1.3rem;
-    background-color: red;
+    background-color: $rojo;
     img:hover {
         transition: all 300ms ease;
         transform: scale(1.12);
     }
 
     .navbar-collapse {
-        align-items: center;
+        align-items: $aligncentrado;
         justify-content: end;
     }
 
     .nav-link {
-        font-family: 'Roboto', sans-serif;
+        font-family: $fuentesecundaria;
         border: none;
         padding: 12px 30px;
         border-radius: 50px;
@@ -46,9 +62,9 @@ body {
 /*Index*/
 
 main {
-    padding-top: 80px;
+    padding-top: 40px+40px;
     padding-bottom: 100px;
-    margin-left: 15px;
+    margin-left: 5px*3;
     margin-right: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -67,26 +83,25 @@ main {
     header {
         grid-area: titulo;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        @include just-alig-centrado(center);
     }
 
     .titulo {
         
         grid-area: titulo;
-        justify-self: center;
-        align-self: center;
-        font-family: 'Alata', sans-serif;
+        justify-self: $justifycentrado;
+        align-self: $aligncentrado;
+        font-family: $fuenteprincipal;
         font-weight: 700;
-        font-size: 100px;
+        font-size: 50px*2;
         text-align: end;
     }
 
     .primer-texto {
         grid-area: primertexto;
-        align-self: center;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
+        align-self: $aligncentrado;
+        @include textocentrado(center);
+        font-family: $fuentesecundaria;
         font-size: 20px;
     }
 
@@ -94,29 +109,29 @@ main {
         grid-area: primertextoiconos;
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: $aligncentrado;
     }
 
     .segundo-texto-iconos {
         grid-area: segundotextoiconos;
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: $aligncentrado;
     }
 
     .segundo-texto {
         grid-area: segundotexto;
-        align-self: center;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
+        align-self: $aligncentrado;
+        @include textocentrado(center);
+        font-family: $fuentesecundaria;
         font-size: 20px;
     }
 
     .tercer-texto {
         grid-area: tercertexto;
-        align-self: center;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
+        align-self: $aligncentrado;
+        @include textocentrado(center);
+        font-family: $fuentesecundaria;
         font-size: 20px;
     }
 
@@ -124,7 +139,7 @@ main {
         grid-area: tercertextoiconos;
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: $aligncentrado;
 
     }
 }
@@ -133,16 +148,16 @@ main {
 /*Galeria*/
 
 .galeria-container {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 5px*4;
+    margin-left: (40px/2);
+    margin-right: 60px - 40px;
     
     .titulo-galeria {
         display: inline-block;
         position: relative;
         padding-top: 55px;
         padding-bottom: 70px;
-        font-family: 'Roboto', sans-serif;
+        font-family: $fuentesecundaria;
         font-weight: 600;
         font-size: 50px;
     }
@@ -162,18 +177,18 @@ main {
     margin-bottom: 60px;
     
     h1 {
-        font-family: 'Roboto', sans-serif;
+        font-family: $fuentesecundaria;
         font-size: 70px;
         margin-bottom: 50px;
-        font-weight: 500;
+        font-weight: 5 * 100;
     }
 
     .btn {
-        font-family: 'Alata', sans-serif;
+        font-family: $fuenteprincipal;
         margin-top: 30px;
         padding: 8px 30px 8px 30px;
-        background-color: red;
-        border-color: red;
+        background-color: $rojo;
+        border-color: $rojo;
         color: black;
 
         &:hover {
@@ -188,7 +203,7 @@ main {
     }
 
     .bi {
-        font-size: 40px;
+        font-size: 20px + (10px*2);
     }
 }
 
@@ -199,14 +214,12 @@ main {
     display: inline-block;
     position: relative;
     padding-top: 70px;
-    font-family: 'Roboto', sans-serif;
+    font-family: $fuentesecundaria;
     font-weight: 600;
     font-size: 50px;
 }
 
-
 .tr-card {
-
     transition: all 300ms ease;
 
     img{
@@ -221,51 +234,52 @@ main {
             filter: grayscale(0%);
         }
     }
+
+    .tr-card-text {
+        font-family: $fuentesecundaria;
+        font-size: 17px;
+    }
+    
+    .tr-card-title {
+        font-family: $fuenteprincipal;
+        font-size: 30px;
+    }
 }
 
-.tr-card-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-}
-
-.tr-card-title {
-    font-family: 'Alata', sans-serif;
-    font-size: 30px;
-}
 
 
 /*Staff*/
 
-.staff-titulo {
-    display: inline-block;
-    position: relative;
-    padding-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 50px;
-}
-
-.st-card {
-    background-color: transparent;
-    border: none;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.st-card-title {
-    font-family: 'Alata', sans-serif;
-    font-size: 30px;
-    margin-top: 3px;
-    margin-bottom: 20px;
-}
-
-.st-card-text {
-    font-family: 'Roboto', sans-serif;
-}
-
 .st-container {
     margin-top: 60px;
     margin-bottom: 60px;
+
+    .staff-titulo {
+        display: inline-block;
+        position: relative;
+        padding-top: 20px;
+        font-family: $fuentesecundaria;
+        font-weight: (1200/2);
+        font-size: 50px;
+    }
+
+    .st-card {
+        background-color: transparent;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 100px - 50px;
+
+        .st-card-title {
+            font-family: $fuenteprincipal;
+            font-size: 30px;
+            margin-top: 3px;
+            margin-bottom: 20px;
+        }
+        
+        .st-card-text {
+            font-family: $fuentesecundaria;
+        }
+    }
 }
 
 
@@ -273,41 +287,40 @@ main {
 .error-container {
     height: 850px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include just-alig-centrado(center);
     flex-direction: column;
-}
 
-.error-titulo {
-    font-family: 'Alata', sans-serif;
-    font-weight: 700;
-    font-size: 100px;
-}
-
-.error-texto {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.error-boton {
-    font-family: 'Alata', sans-serif;
-    text-decoration: none;
-    margin-top: 30px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 0.5rem;
-    background-color: red;
-    border-color: red;
-    color: black;
-
-    &:hover {
-        background-color: rgb(245, 0, 0);
-        box-shadow: 1px 1px 3px grey;
+    .error-titulo {
+        font-family: $fuenteprincipal;
+        font-weight: 700;
+        font-size: 10px*10;
     }
     
-    &:active {
-        background-color: black;
-        border-color: black;
-        color: white;
+    .error-texto {
+        @include textocentrado(center);
+        font-family: $fuentesecundaria;
+    }
+    
+    .error-boton {
+        font-family: $fuenteprincipal;
+        text-decoration: none;
+        margin-top: 30px;
+        padding: 10px 30px 10px 30px;
+        border-radius: 0.5rem;
+        background-color: $rojo;
+        border-color: $rojo;
+        color: black;
+    
+        &:hover {
+            background-color: rgb(245, 0, 0);
+            box-shadow: 1px 1px 3px grey;
+        }
+        
+        &:active {
+            background-color: black;
+            border-color: black;
+            color: white;
+        }
     }
 }
 
@@ -321,7 +334,7 @@ footer {
     .iconos-redes-sociales{
         
         a{
-            padding-right: 30px;
+            padding-right: 95px - 65px;
             padding-left: 30px;
             transition: all 0.2s ease-in;
         }
@@ -450,7 +463,7 @@ footer {
 
 @media screen and (max-width: 400px) {
     .error-titulo{
-        text-align: center;
+        @include textocentrado(center);
     }
 }
 

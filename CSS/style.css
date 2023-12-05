@@ -54,8 +54,8 @@ main .bi {
 main header {
   grid-area: titulo;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 main .titulo {
   grid-area: titulo;
@@ -181,19 +181,21 @@ main .tercer-texto-iconos {
 .tr-card:hover img {
   filter: grayscale(0%);
 }
-
-.tr-card-text {
+.tr-card .tr-card-text {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
 }
-
-.tr-card-title {
+.tr-card .tr-card-title {
   font-family: "Alata", sans-serif;
   font-size: 30px;
 }
 
 /*Staff*/
-.staff-titulo {
+.st-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.st-container .staff-titulo {
   display: inline-block;
   position: relative;
   padding-top: 20px;
@@ -201,28 +203,20 @@ main .tercer-texto-iconos {
   font-weight: 600;
   font-size: 50px;
 }
-
-.st-card {
+.st-container .st-card {
   background-color: transparent;
   border: none;
   margin-top: 30px;
   margin-bottom: 50px;
 }
-
-.st-card-title {
+.st-container .st-card .st-card-title {
   font-family: "Alata", sans-serif;
   font-size: 30px;
   margin-top: 3px;
   margin-bottom: 20px;
 }
-
-.st-card-text {
+.st-container .st-card .st-card-text {
   font-family: "Roboto", sans-serif;
-}
-
-.st-container {
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 /*Error404*/
@@ -233,19 +227,16 @@ main .tercer-texto-iconos {
   align-items: center;
   flex-direction: column;
 }
-
-.error-titulo {
+.error-container .error-titulo {
   font-family: "Alata", sans-serif;
   font-weight: 700;
   font-size: 100px;
 }
-
-.error-texto {
+.error-container .error-texto {
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
-
-.error-boton {
+.error-container .error-boton {
   font-family: "Alata", sans-serif;
   text-decoration: none;
   margin-top: 30px;
@@ -255,11 +246,11 @@ main .tercer-texto-iconos {
   border-color: red;
   color: black;
 }
-.error-boton:hover {
+.error-container .error-boton:hover {
   background-color: rgb(245, 0, 0);
   box-shadow: 1px 1px 3px grey;
 }
-.error-boton:active {
+.error-container .error-boton:active {
   background-color: black;
   border-color: black;
   color: white;
