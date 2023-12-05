@@ -136,12 +136,22 @@ main {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-
+    
+    .titulo-galeria {
+        display: inline-block;
+        position: relative;
+        padding-top: 55px;
+        padding-bottom: 70px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 50px;
+    }
     img {
         border: 3px solid black;
         box-shadow: 5px 6px 3px rgba(0, 0, 0, 0.25);
     }
 }
+
 
 
 
@@ -151,10 +161,11 @@ main {
     margin-top: 50px;
     margin-bottom: 60px;
     
-    legend {
+    h1 {
         font-family: 'Roboto', sans-serif;
         font-size: 70px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
+        font-weight: 500;
     }
 
     .btn {
@@ -183,6 +194,16 @@ main {
 
 
 /*Travesias*/
+
+.tr-title {
+    display: inline-block;
+    position: relative;
+    padding-top: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+}
+
 
 .tr-card {
 
@@ -215,10 +236,19 @@ main {
 
 /*Staff*/
 
+.staff-titulo {
+    display: inline-block;
+    position: relative;
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+}
+
 .st-card {
     background-color: transparent;
     border: none;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
@@ -391,6 +421,19 @@ footer {
         padding-bottom: 55px;
         font-size: 70px;
     }
+    }
+}
+
+/*Contacto*/
+@media screen and (max-width: 576px) {
+    .input-container {
+        width: 80%;
+    }
+
+    .form-container {
+        h1 {
+            font-size: 55px;
+        }
     }
 }
 
