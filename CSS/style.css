@@ -357,5 +357,28 @@ footer .iconos-redes-sociales i:hover {
     text-align: center;
   }
 }
+/*Travesias*/
+@media screen and (max-width: 540px) {
+  .tr-title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .tr-title {
+    font-size: 35px;
+  }
+}
+/*Galeria*/
+@media screen and (max-width: 430px) {
+  .galeria-container .titulo-galeria {
+    font-size: 35px;
+  }
+}
+/*Staff*/
+@media screen and (max-width: 470px) {
+  .staff-titulo {
+    font-size: 40px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
